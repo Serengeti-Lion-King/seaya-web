@@ -1,4 +1,9 @@
-@import url('./reset.css');
+@import url('./reset.scss');
+
+$primary-color: #646cff;
+$hover-color: #535bf2;
+$background-dark: #242424;
+$background-light: #ffffff;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -7,7 +12,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: $background-dark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,11 +22,12 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: $primary-color;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
+  &:hover {
+    color: $hover-color;
+  }
 }
 
 body {
@@ -47,23 +53,27 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+  &:hover {
+    border-color: $primary-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: $background-light;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
