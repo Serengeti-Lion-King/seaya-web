@@ -6,7 +6,7 @@ interface PortDropdownProps {
   label: string;
 }
 
-function PortDropdown({ options, label }: PortDropdownProps) {
+const PortDropdown = ({ options, label }: PortDropdownProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
@@ -49,6 +49,6 @@ function PortDropdown({ options, label }: PortDropdownProps) {
       )}
     </div>
   );
-}
+};
 
 export default PortDropdown;

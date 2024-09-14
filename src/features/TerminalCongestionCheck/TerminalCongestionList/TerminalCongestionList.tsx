@@ -1,5 +1,5 @@
-function TerminalCongestionList() {
+const TerminalCongestionList = () => {
   return <div>TerminalCongestionList</div>;
-}
+};
 
 export default TerminalCongestionList;
