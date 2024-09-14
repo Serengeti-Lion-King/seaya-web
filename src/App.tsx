@@ -1,9 +1,10 @@
 import './App.scss';
+import TerminalCongestionCheckPage from './pages/TerminalCongestionCheckPage.tsx';
 
 function App() {
   return (
     <div>
-      <div>adsf</div>
+      <TerminalCongestionCheckPage />
     </div>
   );
 }

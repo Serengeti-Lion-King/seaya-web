@@ -25,5 +25,6 @@ module.exports = {
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'linebreak-style': ['error', 'unix'], // Unix 스타일인 LF를 강제
   },
 };
