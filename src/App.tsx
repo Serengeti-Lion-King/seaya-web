@@ -1,9 +1,17 @@
-import './App.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import MainPage from '@pages/MainPage';
+
+const router = createBrowserRouter([
+  {
+    path: '/mainpage',
+    element: <MainPage />,
+  },
+]);
 
 function App() {
   return (
     <div>
-      <div>adsf</div>
+      <RouterProvider router={router} />
     </div>
   );
 }
