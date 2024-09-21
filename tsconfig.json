@@ -1,7 +1,35 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./", // 프로젝트의 루트 경로
+    "paths": {
+      "@assets/*": ["src/assets/*"], // @assets 별칭 설정
+      "@components/*": ["src/components/*"], // @components 별칭 설정
+      "@features/*": ["src/features/*"], // @features 별칭 설정
+      "@pages/*": ["src/pages/*"], // @pages 별칭 설정
+      "@styles/*": ["src/styles/*"], // @styles 별칭 설정
+      "@utils/*": ["src/utils/*"] // @utils 별칭 설정
+    }
+  },
+  "include": ["src/**/*"], // TypeScript가 처리할 파일들 (src 폴더 포함)
+  "exclude": ["node_modules"] // 제외할 폴더
+  // "files": [] // 개별 파일 목록 (필요한 경우 추가)
+  // "references": [
+  //   { "path": "./tsconfig.app.json" }, // 앱 관련 설정
+  //   { "path": "./tsconfig.node.json" } // 노드 관련 설정
+  // ]
 }

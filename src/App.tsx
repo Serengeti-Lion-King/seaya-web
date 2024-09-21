@@ -1,5 +1,5 @@
+import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
 import './App.scss';
-import TerminalCongestionCheckPage from './pages/TerminalCongestionCheckPage.tsx';
 
 const App = () => {
   return (

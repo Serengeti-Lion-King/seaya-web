@@ -10,7 +10,6 @@ const PortDropdown = ({ options, label }: PortDropdownProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
-  // 함수 타입 정의 추가
   const toggleDropdown = (): void => {
     setIsOpen(!isOpen);
   };
