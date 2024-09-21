@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import useDropdown from '@hooks/useDropdown';
 import './TerminalDropdown.scss';
 
 interface TerminalDropdownProps {
@@ -7,17 +7,8 @@ interface TerminalDropdownProps {
 }
 
 const TerminalDropdown = ({ options, label }: TerminalDropdownProps) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
-
-  const toggleDropdown = (): void => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleOptionClick = (option: string): void => {
-    setSelectedOption(option);
-    setIsOpen(false);
-  };
+  const { isOpen, selectedOption, toggleDropdown, handleOptionClick } =
+    useDropdown(label);
 
   return (
     <div className="terminal-dropdown">
