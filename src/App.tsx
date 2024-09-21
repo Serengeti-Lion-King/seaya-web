@@ -1,5 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MainPage from '@pages/MainPage';
+import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
+import './App.scss';
 
 const router = createBrowserRouter([
   {
@@ -8,12 +10,13 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+const App = () => {
   return (
     <div>
       <RouterProvider router={router} />
+      <TerminalCongestionCheckPage />
     </div>
   );
-}
+};
 
 export default App;

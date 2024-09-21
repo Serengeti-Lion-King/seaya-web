@@ -25,11 +25,46 @@ module.exports = {
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'linebreak-style': ['error', 'unix'], // Unix 스타일인 LF를 강제
     'prettier/prettier': [
       'error',
       {
         endOfLine: 'auto',
       },
     ],
+
+    // 화살표 함수로 컴포넌트 정의 강제
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function', // 이름이 있는 컴포넌트는 화살표 함수로 강제
+        unnamedComponents: 'arrow-function', // 익명 컴포넌트도 화살표 함수로 강제
+      },
+    ],
+
+    // 모든 콜백에서 화살표 함수 사용 강제
+    'prefer-arrow-callback': 'error',
+
+    // TypeScript와 관련된 규칙
+    '@typescript-eslint/explicit-module-boundary-types': 'off', // 함수 반환 타입 지정 비활성화
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // 사용되지 않는 변수 경고
+  },
+  settings: {
+    react: {
+      version: 'detect', // React 버전을 자동으로 감지
+    },
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@assets', './src/assets'], // Vite에서 사용 중인 별칭 추가
+          ['@components', './src/components'], // Vite에서 사용 중인 별칭 추가
+          ['@features', './src/features'], // Vite에서 사용 중인 별칭 추가
+          ['@pages', './src/pages'], // Vite에서 사용 중인 별칭 추가
+          ['@styles', './src/styles'], // Vite에서 사용 중인 별칭 추가
+          ['@utils', './src/utils'], // Vite에서 사용 중인 별칭 추가
+        ],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'], // 사용 중인 파일 확장자 추가
+      },
+    },
   },
 };
