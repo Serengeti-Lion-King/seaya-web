@@ -32,6 +32,16 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        ts: 'never',
+        tsx: 'never',
+        js: 'never',
+        jsx: 'never',
+      },
+    ],
 
     // 화살표 함수로 컴포넌트 정의 강제
     'react/function-component-definition': [
