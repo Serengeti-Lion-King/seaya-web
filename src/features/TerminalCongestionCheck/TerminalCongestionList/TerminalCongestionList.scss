@@ -1,0 +1,64 @@
+// layout/_terminalLayout.scss
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.terminal-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.terminal-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-status,
+.return-status {
+  display: flex;
+  flex-direction: column;
+}
+
+.status {
+  padding: 3px 6px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+// theme/_terminalTheme.scss
+.terminal-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.terminal-time {
+  color: gray;
+  font-size: 12px;
+}
+
+.status-busy {
+  background-color: red;
+  color: white;
+}
+
+.status-normal {
+  background-color: blue;
+  color: white;
+}
+
+.trucks {
+  background-color: green;
+  color: white;
+}
