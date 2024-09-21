@@ -1,11 +1,12 @@
+import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
 import './App.scss';
 
-function App() {
+const App = () => {
   return (
     <div>
-      <div>adsf</div>
+      <TerminalCongestionCheckPage />
     </div>
   );
-}
+};
 
 export default App;

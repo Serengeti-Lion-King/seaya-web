@@ -1,0 +1,82 @@
+.port-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+
+  &__toggle {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+  &__arrow {
+    margin-left: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    user-select: none;
+
+    &--down {
+      transform: rotate(45deg);
+    }
+
+    &--up {
+      transform: rotate(-135deg);
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  &__option {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__option-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+
+    &:focus {
+      outline: none;
+      background-color: #d0d0d0;
+    }
+  }
+}
