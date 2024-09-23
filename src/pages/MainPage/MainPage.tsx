@@ -1,10 +1,10 @@
 // MainPage.tsx
 
-import ToolBar from '@components/ToolBar';
-import SearchBar from '@components/SearchBar';
+import ToolBar from '@components/ToolBar/ToolBar';
+import SearchBar from '@components/SearchBar/SearchBar';
 import mainPoster from '@assets/mainPoster.png';
 
-function MainPage() {
+const MainPage = () => {
   return (
     <div>
       <SearchBar />
@@ -12,6 +12,6 @@ function MainPage() {
       <ToolBar />
     </div>
   );
-}
+};
 
 export default MainPage;
