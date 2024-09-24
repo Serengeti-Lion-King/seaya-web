@@ -7,7 +7,7 @@ import { ReactComponent as MyIcon } from '@assets/myIcon.svg';
 
 const ToolBar = () => {
   return (
-    <div className="toolbar">
+    <div className="tool-bar">
       <span>
         <a href="/">
           <HomeIcon />
