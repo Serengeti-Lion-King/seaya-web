@@ -26,7 +26,7 @@ module.exports = {
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // 'linebreak-style': ['error', 'unix'], // BUG:  Unix 스타일인 LF를 강제
-    'linebreak-style': 0,
+    // 'linebreak-style': 0,
     'prettier/prettier': [
       'error',
       {
