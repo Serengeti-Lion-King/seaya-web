@@ -1,6 +1,6 @@
 // SeacrchBar.tsx
 
-import { ReactComponent as SearchIcon } from '@assets/search.svg';
+import SearchIcon from '@assets/search.svg?react';
 import '@components/SearchBar/SearchBar.scss';
 
 const SearchBar = () => {

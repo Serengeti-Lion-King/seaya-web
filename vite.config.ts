@@ -1,13 +1,11 @@
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 import { defineConfig } from 'vite';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // include는 ?react → ReactComponent
-  plugins: [react(), svgr({ include: '**/*.svg' })],
+  plugins: [react(), svgr()],
   resolve: {
     alias: {
       '@assets': path.resolve(__dirname, './src/assets'),

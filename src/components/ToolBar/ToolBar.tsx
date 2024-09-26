@@ -1,28 +1,28 @@
 // ToolBar.tsx
 
 import '@components/ToolBar/ToolBar.scss';
-import { ReactComponent as HomeIcon } from '@assets/homeIcon.svg';
-import { ReactComponent as SearchIcon } from '@assets/searchIcon.svg';
-import { ReactComponent as MyIcon } from '@assets/myIcon.svg';
+import HomeIcon from '@assets/homeIcon.svg?react';
+import SearchIcon from '@assets/searchIcon.svg?react';
+import MyIcon from '@assets/myIcon.svg?react';
 
 const ToolBar = () => {
   return (
     <div className="tool-bar">
       <span>
         <a href="/">
-          <HomeIcon />
+          <HomeIcon className="icon home-icon" />
           <span>홈</span>
         </a>
       </span>
       <span>
         <a href="/">
-          <SearchIcon />
+          <SearchIcon className="icon search-icon" />
           <span>NFT 조회</span>
         </a>
       </span>
       <span>
         <a href="/">
-          <MyIcon />
+          <MyIcon className="icon my-icon" />
           <span>MY</span>
         </a>
       </span>

@@ -8,13 +8,16 @@ const router = createBrowserRouter([
     path: '/',
     element: <MainPage />,
   },
+  {
+    path: '/terminalcongestioncheckpage',
+    element: <TerminalCongestionCheckPage />,
+  },
 ]);
 
 const App = () => {
   return (
     <div>
       <RouterProvider router={router} />
-      <TerminalCongestionCheckPage />
     </div>
   );
 };
