@@ -1,5 +1,3 @@
-import NavigationBar from '@components/NavigationBar/NavigationBar';
-import navItems from '@components/NavigationBar/navItems';
 import TerminalDropdown from '@components/TerminalDropdown/TerminalDropdown';
 
 const VesselOperationStatusPage = () => {
@@ -8,7 +6,6 @@ const VesselOperationStatusPage = () => {
 
   return (
     <div>
-      <NavigationBar navText={navItems[5]} />
       <TerminalDropdown options={portOptions} label={dropdownLabel} />
     </div>
   );
