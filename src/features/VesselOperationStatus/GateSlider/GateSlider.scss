@@ -1,0 +1,18 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.arrowButton {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    color: #007bff;
+  }
+}
