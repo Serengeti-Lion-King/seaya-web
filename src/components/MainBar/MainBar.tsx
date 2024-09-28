@@ -1,10 +1,10 @@
 import './MainBar.scss';
-import SeayaIcon from '@assets/seayaIcon.svg?react';
+import LogoIcon from '@assets/logoIcon.svg?react';
 
 const MainBar = () => {
   return (
     <div className="logo">
-      <SeayaIcon />
+      <LogoIcon />
     </div>
   );
 };
