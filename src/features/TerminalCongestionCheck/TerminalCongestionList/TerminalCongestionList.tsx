@@ -1,7 +1,7 @@
 import AnchorIcon from '@assets/anchor.svg?react';
 import { useEffect, useState } from 'react';
+import { getTerminalData, TerminalData } from '../terminalItems';
 import './TerminalCongestionList.scss';
-import { getTerminalData, TerminalData } from './terminalItems';
 
 const TerminalCongestionList = () => {
   const [terminalData, setTerminalData] = useState<TerminalData[]>([]);
