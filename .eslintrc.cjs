@@ -59,7 +59,10 @@ module.exports = {
     // TypeScript와 관련된 규칙
     '@typescript-eslint/explicit-module-boundary-types': 'off', // 함수 반환 타입 지정 비활성화
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // 사용되지 않는 변수 경고
+
+    'import/no-unresolved': 'off',
   },
+  ignorePatterns: ['**/*.svg'],
   settings: {
     react: {
       version: 'detect', // React 버전을 자동으로 감지
