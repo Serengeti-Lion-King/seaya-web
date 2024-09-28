@@ -6,47 +6,45 @@
 //   src: url('@fonts/PRETENDARD-LIGHT.ttf') format('truetype');
 // }
 
-.toolbar {
-  // font-family: 'PRETENDARD-LIGHT';
+.tool-bar {
+  // 상단에 회색 경계선 추가
   border-top: 1px solid #dddddd;
 
-  // 아이콘들 가로로 정렬 및 띄엄 띄엄
+  // 아이콘들 가로로 정렬 및 간격 설정
   display: flex;
   justify-content: space-around;
 
-  // 아이콘 수직 중앙 정렬 (세로측 중앙 정렬)
+  // 아이콘 수직 중앙 정렬
   align-items: center;
 
+  // 전체 너비와 최소 너비 설정
   width: 100%;
-  // 최소 320px만 제공
   min-width: 320px;
   height: 59px;
 
+  // 화면 하단 고정
   position: fixed;
-  // position: fixed를 하였기 때문에 빈틈없이 적용하기 위함
   bottom: 0;
   right: 0;
   left: 0;
 
   span {
-    // flex: 1;
-    // flex-shrink: 1,
-    // flex-basis: 0%
-    // 위의 세 속성들과 flex:1은 동일한 역할
+    // 각 아이콘을 균등하게 분배
     flex: 1;
     text-align: center;
 
     a {
+      // 아이콘과 텍스트를 세로로 정렬
       display: flex;
-      // 아이콘이랑 텍스트는 같이 요소 안에 있으므로 세로로 정렬
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: 777777;
+      color: #777777;
       font-size: 10px;
       transition: color 0.1s ease;
 
-      svg {
+      .icon {
+        // 아이콘 크기 및 색상 설정
         width: 24px;
         height: 24px;
         fill: #777777;
@@ -54,14 +52,15 @@
       }
 
       &:hover {
-        // 마우스로 누르면 색상 변경
+        // 마우스 호버 시 색상 변경
         color: black;
-        svg {
+        .icon {
           fill: black;
         }
       }
 
       &.active {
+        // 활성화된 상태에서 색상 변경
         color: black;
       }
     }

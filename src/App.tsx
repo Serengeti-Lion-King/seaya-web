@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: '/terminal-congestion-check-page',
+    path: '/terminalcongestioncheckpage',
     element: <TerminalCongestionCheckPage />,
   },
 ]);
