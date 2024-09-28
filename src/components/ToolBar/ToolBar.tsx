@@ -3,8 +3,8 @@
 import './ToolBar.scss';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@assets/homeIcon.svg?react';
-import SearchIcon from '@assets/searchIcon.svg?react';
 import MyIcon from '@assets/myIcon.svg?react';
+import SearchIcon from '@assets/searchIcon.svg?react';
 
 const ToolBar = () => {
   return (

@@ -20,6 +20,7 @@
       "@assets/*": ["src/assets/*"], // @assets 별칭 설정
       "@components/*": ["src/components/*"], // @components 별칭 설정
       "@features/*": ["src/features/*"], // @features 별칭 설정
+      "@hooks/*": ["src/hooks/*"], // @hooks 별칭 설정
       "@pages/*": ["src/pages/*"], // @pages 별칭 설정
       "@styles/*": ["src/styles/*"], // @styles 별칭 설정
       "@utils/*": ["src/utils/*"] // @utils 별칭 설정
