@@ -1,0 +1,68 @@
+// ToolBar.scss
+
+// @font-face {
+//   font-family: 'PRETENDARD-LIGHT';
+//   font-weight: lighter;
+//   src: url('@fonts/PRETENDARD-LIGHT.ttf') format('truetype');
+// }
+
+.tool-bar {
+  // 상단에 회색 경계선 추가
+  border-top: 1px solid #dddddd;
+
+  // 아이콘들 가로로 정렬 및 간격 설정
+  display: flex;
+  justify-content: space-around;
+
+  // 아이콘 수직 중앙 정렬
+  align-items: center;
+
+  // 전체 너비와 최소 너비 설정
+  width: 100%;
+  min-width: 320px;
+  height: 59px;
+
+  // 화면 하단 고정
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  span {
+    // 각 아이콘을 균등하게 분배
+    flex: 1;
+    text-align: center;
+
+    a {
+      // 아이콘과 텍스트를 세로로 정렬
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #777777;
+      font-size: 10px;
+      transition: color 0.1s ease;
+
+      .icon {
+        // 아이콘 크기 및 색상 설정
+        width: 24px;
+        height: 24px;
+        fill: #777777;
+        transition: fill 0.1s ease;
+      }
+
+      &:hover {
+        // 마우스 호버 시 색상 변경
+        color: black;
+        .icon {
+          fill: black;
+        }
+      }
+
+      &.active {
+        // 활성화된 상태에서 색상 변경
+        color: black;
+      }
+    }
+  }
+}

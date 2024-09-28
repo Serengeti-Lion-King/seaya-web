@@ -26,7 +26,7 @@
       "@utils/*": ["src/utils/*"] // @utils 별칭 설정
     }
   },
-  "include": ["src/**/*"], // TypeScript가 처리할 파일들 (src 폴더 포함)
+  "include": ["src/**/*", "src/custom.d.ts"], // TypeScript가 처리할 파일들 (src 폴더 포함)
   "exclude": ["node_modules"] // 제외할 폴더
   // "files": [] // 개별 파일 목록 (필요한 경우 추가)
   // "references": [
