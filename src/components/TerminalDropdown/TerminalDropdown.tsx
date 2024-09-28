@@ -1,35 +1,35 @@
 import useDropdown from '@hooks/useDropdown';
-import './PortDropdown.scss';
+import './TerminalDropdown.scss';
 
-interface PortDropdownProps {
+interface TerminalDropdownProps {
   options: string[];
   label: string;
 }
 
-const PortDropdown = ({ options, label }: PortDropdownProps) => {
+const TerminalDropdown = ({ options, label }: TerminalDropdownProps) => {
   const { isOpen, selectedOption, toggleDropdown, handleOptionClick } =
     useDropdown(label);
 
   return (
-    <div className="port-dropdown">
+    <div className="terminal-dropdown">
       <button
         type="button"
-        className="port-dropdown__toggle"
+        className="terminal-dropdown__toggle"
         onClick={toggleDropdown}
       >
         {selectedOption || label}
         <span
-          className={`port-dropdown__arrow ${isOpen ? 'port-dropdown__arrow--up' : 'port-dropdown__arrow--down'}`}
+          className={`terminal-dropdown__arrow ${isOpen ? 'terminal-dropdown__arrow--up' : 'terminal-dropdown__arrow--down'}`}
         />
       </button>
       {isOpen && (
-        <ul className="port-dropdown__menu">
+        <ul className="terminal-dropdown__menu">
           {options.map(option => (
-            <li className="port-dropdown__option" key={option}>
+            <li className="terminal-dropdown__option" key={option}>
               <button
                 type="button"
                 onClick={() => handleOptionClick(option)}
-                className="port-dropdown__option-button"
+                className="terminal-dropdown__option-button"
               >
                 {option}
               </button>
@@ -41,4 +41,4 @@ const PortDropdown = ({ options, label }: PortDropdownProps) => {
   );
 };
 
-export default PortDropdown;
+export default TerminalDropdown;
