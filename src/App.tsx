@@ -1,3 +1,4 @@
+import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage';
 import MainPage from '@pages/MainPage/MainPage';
 import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
 import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: '/vessel-operation-status-page',
     element: <VesselOperationStatusPage />,
+  },
+  {
+    path: '/import-export-progress-check-page',
+    element: <ImportExportProgressCheckPage />,
   },
 ]);
 
