@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import './ImportExportProgressModal.scss';
 
 interface ImportExportModalProps {
@@ -9,23 +10,20 @@ const ImportExportProgressModal = ({
   isOpen,
   onClose,
 }: ImportExportModalProps) => {
-  if (!isOpen) return null;
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      onClose();
+  useEffect(() => {
+    // 모달이 열리면 첫 번째 버튼에 포커스를 이동
+    if (isOpen && closeButtonRef.current) {
+      closeButtonRef.current.focus();
     }
-  };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
 
   return (
     <div className="modal-backdrop">
-      <div
-        className="modal-content"
-        onClick={onClose}
-        role="button"
-        tabIndex={0}
-        onKeyDown={handleKeyDown}
-      >
+      <div className="modal-content">
         <p>아직 작업 중에 있습니다.</p>
         <button type="button" className="modal-button" onClick={onClose}>
           확인
