@@ -9,17 +9,13 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: '/terminalcongestioncheckpage',
+    path: '/terminal-congestion-check-page',
     element: <TerminalCongestionCheckPage />,
   },
 ]);
 
 const App = () => {
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

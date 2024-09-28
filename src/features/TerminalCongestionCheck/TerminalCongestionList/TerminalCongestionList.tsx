@@ -1,3 +1,4 @@
+import AnchorIcon from '@assets/anchor.svg?react';
 import { useEffect, useState } from 'react';
 import './TerminalCongestionList.scss';
 import { getTerminalData, TerminalData } from './terminalItems';
@@ -24,6 +25,7 @@ const TerminalCongestionList = () => {
       {terminalData.map(terminal => (
         <div key={terminal.id} className="terminal-card">
           <div className="terminal-header">
+            <AnchorIcon />
             <div className="terminal-name">{terminal.name}</div>
             <div className="terminal-time">{terminal.operationTime}</div>
           </div>
