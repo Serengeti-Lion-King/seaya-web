@@ -1,9 +1,9 @@
 // ToolBar.tsx
 
-import '@components/ToolBar/ToolBar.scss';
 import HomeIcon from '@assets/homeIcon.svg?react';
-import SearchIcon from '@assets/searchIcon.svg?react';
 import MyIcon from '@assets/myIcon.svg?react';
+import SearchIcon from '@assets/searchIcon.svg?react';
+import '@components/ToolBar/ToolBar.scss';
 
 const ToolBar = () => {
   return (
