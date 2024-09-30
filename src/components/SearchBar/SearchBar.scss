@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 37px;
 }
-
 .search-bar {
   // 검색바 안에 있는 요소들 가로 정렬(돋보기, 텍스트)
   display: flex;
@@ -13,15 +13,14 @@
   background-color: #eeeeee;
   border-radius: 5px;
   padding: 10px 6px;
-  width: 250px;
-  margin-top: 37px;
+  width: 244px;
 }
 
 .search-icon {
   width: 14px;
   height: 14px;
   margin-right: 3px;
-  fill: #777777; /* 아이콘 색상 */
+  fill: #777777;
 }
 
 .search-input {

@@ -1,4 +1,3 @@
-// components/NavigationBar.tsx
 import './NavigationBar.scss';
 
 type NavigationBarProps = {

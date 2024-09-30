@@ -1,6 +1,7 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MainPage from '@pages/MainPage/MainPage';
 import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
+import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
 
 const router = createBrowserRouter([
@@ -9,17 +10,17 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: '/terminalcongestioncheckpage',
+    path: '/terminal-congestion-check-page',
     element: <TerminalCongestionCheckPage />,
+  },
+  {
+    path: '/vessel-operation-status-page',
+    element: <VesselOperationStatusPage />,
   },
 ]);
 
 const App = () => {
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

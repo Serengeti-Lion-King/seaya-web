@@ -1,4 +1,4 @@
-.wrap {
+.shortcut-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px 42px;
@@ -6,7 +6,7 @@
   padding: 0 35px;
 }
 
-.card {
+.shortcut-item {
   border: 1px solid #ddd;
   border-radius: 7px;
   width: 102px;
@@ -15,20 +15,22 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  text-decoration: none;
 }
 
-.title {
+.service-name {
   font-size: 12px;
 }
-.button-icon {
+
+.shortcut-icon {
   width: 24px;
   height: 24px;
-  // margin-left: 20%;
   align-self: flex-end;
   margin-right: 8px;
   fill: #ddd;
   margin-bottom: 3px;
 }
+
 .main-poster {
   margin-left: 35px;
   width: 250px;
