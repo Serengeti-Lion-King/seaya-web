@@ -1,4 +1,4 @@
-import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage';
+import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage/ImportExportProgressCheckPage';
 import MainPage from '@pages/MainPage/MainPage';
 import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
 import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';

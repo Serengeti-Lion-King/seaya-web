@@ -3,9 +3,13 @@
 import SearchIcon from '@assets/magnifierIcon.svg?react';
 import './SearchBar.scss';
 
-const SearchBar = () => {
+interface SearchBarProps {
+  className?: string;
+}
+
+const SearchBar = ({ className = '' }: SearchBarProps) => {
   return (
-    <div className="search-container">
+    <div className={`search-container ${className}`}>
       <div className="search-bar">
         <SearchIcon className="search-icon" />
         <input
