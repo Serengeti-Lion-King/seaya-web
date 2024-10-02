@@ -9,7 +9,7 @@ const TrackingStatus = () => {
   return (
     <div className="tracking-status">
       {detailsData.map(detail => (
-        <div className="tracking-status-item">
+        <div key={detail.containerNumber} className="tracking-status-item">
           <h3 className="container-info">
             {detail.containerNumber} ({detail.location})
           </h3>

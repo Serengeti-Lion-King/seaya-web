@@ -11,6 +11,7 @@ const Timeline = ({ currentStep }: TimelineProps) => {
     <div className="timeline">
       {steps.map((step, index) => (
         <div
+          key={step}
           className={`timeline-step ${currentStep >= index + 1 ? 'active' : ''}`}
         >
           <div className="step-indicator" />

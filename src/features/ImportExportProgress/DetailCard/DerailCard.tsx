@@ -19,40 +19,30 @@ const DetailCard = ({
   availability,
   status,
 }: DetailCardProps) => {
+  const details = [
+    { label: '선사', value: ship },
+    { label: 'Sz/Tp (F/E)', value: szTp },
+    { label: '반입 시간', value: inTime },
+    { label: '반출 시간', value: outTime || '-' },
+    { label: '체류 시간', value: stayDuration || '-' },
+    {
+      label: '반출 가능 여부',
+      value: availability,
+      className: `availability ${availability === '반출 가능' ? 'available' : 'not-available'}`,
+    },
+    { label: '상태', value: status, className: 'status' },
+  ];
+
   return (
     <div className="detail-card">
-      <div className="detail-item">
-        <span className="label">선사</span>
-        <span className="value">{ship}</span>
-      </div>
-      <div className="detail-item">
-        <span className="label">Sz/Tp (F/E)</span>
-        <span className="value">{szTp}</span>
-      </div>
-      <div className="detail-item">
-        <span className="label">반입 시간</span>
-        <span className="value">{inTime}</span>
-      </div>
-      <div className="detail-item">
-        <span className="label">반출 시간</span>
-        <span className="value">{outTime || '-'}</span>
-      </div>
-      <div className="detail-item">
-        <span className="label">체류 시간</span>
-        <span className="value">{stayDuration || '-'}</span>
-      </div>
-      <div className="detail-item">
-        <span className="label">반출 가능 여부</span>
-        <span
-          className={`value availability ${availability === '반출 가능' ? 'available' : 'not-available'}`}
-        >
-          {availability}
-        </span>
-      </div>
-      <div className="detail-item">
-        <span className="label">반출 가능 여부</span>
-        <span className="value status">{status}</span>
-      </div>
+      {details.map(detail => (
+        <div key={detail.label} className="detail-item">
+          <span className="label">{detail.label}</span>
+          <span className={`value ${detail.className || ''}`}>
+            {detail.value}
+          </span>
+        </div>
+      ))}
     </div>
   );
 };
