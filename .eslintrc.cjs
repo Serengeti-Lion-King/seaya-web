@@ -41,6 +41,7 @@ module.exports = {
         jsx: 'never',
       },
     ],
+    'react/require-default-props': 'off',
 
     // 화살표 함수로 컴포넌트 정의 강제
     'react/function-component-definition': [

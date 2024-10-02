@@ -1,0 +1,25 @@
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.timeline-step {
+  text-align: center;
+
+  .step-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    margin-bottom: 8px;
+  }
+
+  &.active .step-indicator {
+    background-color: #2563eb; /* active color */
+  }
+
+  .step-label {
+    font-size: 12px;
+  }
+}
