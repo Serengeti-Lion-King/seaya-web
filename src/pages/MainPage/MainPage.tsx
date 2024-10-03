@@ -10,7 +10,13 @@ import GateIcon from '@assets/gateIcon.svg?react';
 import ShipIcon from '@assets/shipIcon.svg?react';
 import './MainPage.scss';
 
+import Button from '@components/Button/Button';
+
 const MainPage = () => {
+  const handleClick = () => {
+    console.log('로그인 버튼 클릭됨');
+  };
+
   return (
     <div>
       <MainBar />
@@ -30,6 +36,7 @@ const MainPage = () => {
           <GateIcon className="shortcut-icon type-terminal" />
         </Link>
       </div>
+      <Button label="로그인" onClick={handleClick} />
       <ToolBar />
     </div>
   );
