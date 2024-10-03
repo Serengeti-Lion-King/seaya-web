@@ -1,6 +1,6 @@
 // TrackingStatus.tsx
 
-import DetailCard from '../DetailCard/DerailCard';
+import DetailCard from '../DetailCard/DetailCard';
 import { detailsData } from '../detailData';
 import Timeline from '../Timeline/Timeline';
 import './TrackingStatus.scss';
