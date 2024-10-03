@@ -11,10 +11,6 @@ import ShipIcon from '@assets/shipIcon.svg?react';
 import './MainPage.scss';
 
 const MainPage = () => {
-  const handleClick = () => {
-    console.log('로그인 버튼 클릭됨');
-  };
-
   return (
     <div>
       <MainBar />
