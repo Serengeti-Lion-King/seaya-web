@@ -1,7 +1,12 @@
 import './Button.scss';
 
-const Button = () => {
-  return <button className="login-button">로그인</button>;
+interface ButtonProps {
+  text: string;
+  className?: string;
+}
+
+const Button = ({ text, className = '' }: ButtonProps) => {
+  return <button className={`login-button ${className}`}>{text}</button>;
 };
 
 export default Button;
