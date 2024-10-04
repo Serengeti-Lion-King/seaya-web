@@ -1,3 +1,4 @@
+import ArrowDownIcon from '@assets/arrow_drop_down.svg?react';
 import useDropdown from '@hooks/useDropdown';
 import './PortDropdown.scss';
 
@@ -18,7 +19,7 @@ const PortDropdown = ({ options, label }: PortDropdownProps) => {
         onClick={toggleDropdown}
       >
         {selectedOption || label}
-        <span
+        <ArrowDownIcon
           className={`port-dropdown__arrow ${isOpen ? 'port-dropdown__arrow--up' : 'port-dropdown__arrow--down'}`}
         />
       </button>

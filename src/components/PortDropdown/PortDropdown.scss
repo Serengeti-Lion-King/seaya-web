@@ -24,18 +24,16 @@
 
   &__arrow {
     margin-left: 10px;
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-    user-select: none;
+    width: 24px; // 원하는 크기로 조절
+    height: 24px;
+    transition: transform 0.3s; // 회전 애니메이션 추가
 
     &--down {
-      transform: rotate(45deg);
+      transform: rotate(0deg); // 닫힌 상태: 아래 방향
     }
 
     &--up {
-      transform: rotate(-135deg);
+      transform: rotate(180deg); // 열린 상태: 위 방향
     }
   }
 
