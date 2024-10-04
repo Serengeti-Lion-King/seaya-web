@@ -1,3 +1,4 @@
+import WestIcon from '@assets/west.svg?react';
 import './NavigationBar.scss';
 
 type NavigationBarProps = {
@@ -7,7 +8,7 @@ type NavigationBarProps = {
 const NavigationBar = ({ navText }: NavigationBarProps) => {
   return (
     <div className="navigation-bar">
-      <span className="navigation-bar__icon">←</span>
+      <WestIcon className="navigation-bar__icon" />
       <span>{navText}</span>
     </div>
   );

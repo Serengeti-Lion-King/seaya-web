@@ -3,11 +3,13 @@
   display: flex;
   align-items: center;
   padding: 10px;
-  width: 300px;
-  justify-content: space-between;
+  width: 320px;
+  justify-content: center;
+  position: relative;
 
   &__icon {
-    margin-right: 10px;
+    position: absolute;
+    left: 10px;
   }
 }
 
