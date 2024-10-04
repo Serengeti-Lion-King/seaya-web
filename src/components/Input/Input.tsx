@@ -1,14 +1,15 @@
 import './Input.scss';
 
-const Input = () => {
+interface InputProps {
+  labelText: string;
+  inputText: string;
+}
+
+const Input = ({ labelText, inputText }: InputProps) => {
   return (
     <div className="input-item id">
-      <label className="text-label">아이디</label>
-      <input
-        type="text"
-        placeholder="아이디를 입력해주세요."
-        className="input-id"
-      />
+      <label className="text-label">{labelText}</label>
+      <input type="text" placeholder={inputText} className="input-id" />
     </div>
   );
 };
