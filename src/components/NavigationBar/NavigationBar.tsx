@@ -1,5 +1,5 @@
 import WestIcon from '@assets/west.svg?react';
-import { useNavigate } from 'react-router-dom';
+import useCustomNavigation from '@hooks/useCustomNavigation';
 import './NavigationBar.scss';
 
 type NavigationBarProps = {
@@ -7,15 +7,14 @@ type NavigationBarProps = {
 };
 
 const NavigationBar = ({ navText }: NavigationBarProps) => {
-  const navigate = useNavigate();
-
-  const handleIconClick = () => {
-    navigate('/');
-  };
+  const { navigateTo } = useCustomNavigation(); // 커스텀 훅 사용
 
   return (
     <div className="navigation-bar">
-      <WestIcon className="navigation-bar__icon" onClick={handleIconClick} />
+      <WestIcon
+        className="navigation-bar__icon"
+        onClick={() => navigateTo('/')}
+      />
       <span>{navText}</span>
     </div>
   );
