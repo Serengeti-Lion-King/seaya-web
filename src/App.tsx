@@ -1,4 +1,5 @@
 import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage/ImportExportProgressCheckPage';
+import LoginPage from '@pages/LoginPage/LoginPage';
 import MainPage from '@pages/MainPage/MainPage';
 import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
 import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
@@ -9,6 +10,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <MainPage />,
+  },
+  {
+    path: '/login-page',
+    element: <LoginPage />,
   },
   {
     path: '/terminal-congestion-check-page',

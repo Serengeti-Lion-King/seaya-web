@@ -9,7 +9,6 @@ import TruckIcon from '@assets/truckIcon.svg?react';
 import GateIcon from '@assets/gateIcon.svg?react';
 import ShipIcon from '@assets/shipIcon.svg?react';
 import './MainPage.scss';
-import Button from '@components/Button/Button';
 
 const MainPage = () => {
   return (
@@ -31,7 +30,6 @@ const MainPage = () => {
           <GateIcon className="shortcut-icon type-terminal" />
         </Link>
       </div>
-      <Button text="로그인" />
       <ToolBar />
     </div>
   );

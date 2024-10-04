@@ -1,0 +1,32 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 53px;
+
+  .input-item {
+    margin-top: 29px;
+  }
+}
+
+button {
+  margin-bottom: 27px;
+  margin-top: 35px;
+}
+
+.links-container {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  color: #777777;
+
+  .link {
+    text-decoration: none;
+    color: #777777;
+  }
+
+  .divider {
+    margin: 0 5px;
+  }
+}
