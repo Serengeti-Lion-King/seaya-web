@@ -3,10 +3,15 @@ import './Button.scss';
 interface ButtonProps {
   text: string;
   className?: string;
+  onClick?: () => void;
 }
 
-const Button = ({ text, className = '' }: ButtonProps) => {
-  return <button className={`login-button ${className}`}>{text}</button>;
+const Button = ({ text, className = '', onClick }: ButtonProps) => {
+  return (
+    <button className={`login-button ${className}`} onClick={onClick}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;
