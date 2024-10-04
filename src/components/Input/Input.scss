@@ -1,0 +1,16 @@
+.input-item {
+  display: flex;
+  flex-direction: column;
+}
+.input-id {
+  width: 270px;
+  height: 38px;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  font-size: 12px;
+  padding: 12px 0px;
+  box-sizing: border-box;
+}
+.text-label {
+  font-size: 12px;
+}
