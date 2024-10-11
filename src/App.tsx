@@ -1,7 +1,7 @@
 import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage/ImportExportProgressCheckPage';
 import LoginPage from '@pages/LoginPage/LoginPage';
 import MainPage from '@pages/MainPage/MainPage';
-import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
+import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage/TerminalCongestionCheckPage';
 import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';

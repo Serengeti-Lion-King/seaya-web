@@ -10,7 +10,10 @@ const TerminalCongestionCheckPage = () => {
 
   return (
     <div>
-      <NavigationBar navText={navItems[4]} />
+      <NavigationBar
+        navText={navItems[4]}
+        className="terminal-congestion-page-navigation-bar"
+      />
       <PortDropdown options={portOptions} label={dropdownLabel} />
       <TerminalCongestionList />
       <ToolBar />

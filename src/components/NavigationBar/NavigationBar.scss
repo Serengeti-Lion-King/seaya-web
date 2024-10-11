@@ -2,21 +2,19 @@
 .navigation-bar {
   display: flex;
   align-items: center;
-  padding: 10px;
-  width: 320px;
+  padding: 10px 0;
+  width: 100%; /* 기본적으로 너비는 100%로 설정 */
   justify-content: center;
   position: relative;
+  // 스킨 관련
+  border-bottom: 1px solid #eee;
+  background: #fff;
 
   &__icon {
     position: absolute;
     left: 10px;
     cursor: pointer;
+    width: 24px;
+    height: 24px; /* 아이콘 크기를 고정 */
   }
-}
-
-// 스킨 관련 (skin)
-.navigation-bar {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
 }
