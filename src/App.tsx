@@ -5,12 +5,12 @@ import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage';
 import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
-import MainLayout from './layouts/MainLayout/MainLayout';
+import MobileWebLayout from './layouts/MobileWebLayout/MobileWebLayout';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainLayout />, // 공통 레이아웃을 적용합니다.
+    element: <MobileWebLayout />, // 공통 레이아웃을 적용합니다.
     children: [
       {
         path: '',

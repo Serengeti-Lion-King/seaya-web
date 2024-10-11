@@ -1,0 +1,22 @@
+.mobile-web-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.mobile-web-view {
+  // width: 100%;
+  // min-width: 320px; /* 필요에 따라 최소 너비를 설정하세요 */
+  // max-width: 600px;
+  // margin: 0 auto; /* 화면 중앙에 배치되도록 하는 예시 */
+
+  width: 320px; /* 모바일 웹 너비 */
+  height: 568px; /* 모바일 웹 높이 */
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 16px; /* 여백을 위한 패딩 */
+}
