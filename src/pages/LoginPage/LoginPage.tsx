@@ -15,11 +15,9 @@ const LoginPage = () => {
           labelText="비밀번호"
           inputText="비밀번호를 입력해주세요."
         />
-
         <Button text="로그인" />
-
         <div className="links-container">
-          <Link to="/find-id" className="link">
+          <Link to="/find-id-page" className="link">
             아이디 찾기
           </Link>
           <span className="divider">|</span>

@@ -1,18 +1,16 @@
-.login-button {
-  background-color: #334e9d;
+// 공통된 css만 넣기
+
+.btn {
+  // background-color: #334e9d;
+  // width: 270px;
+  // height: 39px;
+  // font-size: 16px;
+
   color: white;
   border: none;
   padding: 10px 20px;
-  box-sizing: border-box;
-  width: 270px;
-  height: 39px;
-  font-size: 16px;
   border-radius: 7px;
   cursor: pointer;
   outline: none;
   box-sizing: border-box;
-
-  // &:hover {
-  //   background-color: #2f3a7a;
-  // }
 }
