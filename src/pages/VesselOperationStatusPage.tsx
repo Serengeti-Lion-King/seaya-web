@@ -1,4 +1,8 @@
+import NavigationBar from '@components/NavigationBar/NavigationBar';
+import navItems from '@components/NavigationBar/navItems';
 import TerminalDropdown from '@components/TerminalDropdown/TerminalDropdown';
+import ToolBar from '@components/ToolBar/ToolBar';
+import GateSlider from '@features/VesselOperationStatus/GateSlider/GateSlider';
 
 const VesselOperationStatusPage = () => {
   const portOptions = ['PNC', 'HJNC', 'HPNT', 'BNCT']; // 예시 항목
@@ -6,7 +10,10 @@ const VesselOperationStatusPage = () => {
 
   return (
     <div>
+      <NavigationBar navText={navItems[5]} />
       <TerminalDropdown options={portOptions} label={dropdownLabel} />
+      <GateSlider />
+      <ToolBar />
     </div>
   );
 };
