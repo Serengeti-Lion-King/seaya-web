@@ -9,7 +9,7 @@ const TerminalCongestionCheckPage = () => {
   const dropdownLabel = '항만선택'; // 드롭다운 기본 라벨
 
   return (
-    <div>
+    <>
       <NavigationBar
         navText={navItems[4]}
         className="terminal-congestion-page-navigation-bar"
@@ -17,7 +17,7 @@ const TerminalCongestionCheckPage = () => {
       <PortDropdown options={portOptions} label={dropdownLabel} />
       <TerminalCongestionList />
       <ToolBar />
-    </div>
+    </>
   );
 };
 

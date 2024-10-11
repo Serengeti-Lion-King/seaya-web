@@ -6,6 +6,7 @@ import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
 import MobileWebLayout from './layouts/MobileWebLayout/MobileWebLayout';
+import ServiceLayout from './layouts/ServiceLayout/ServiceLayout';
 
 const router = createBrowserRouter([
   {
@@ -13,24 +14,29 @@ const router = createBrowserRouter([
     element: <MobileWebLayout />, // 공통 레이아웃을 적용합니다.
     children: [
       {
-        path: '',
-        element: <MainPage />,
-      },
-      {
         path: 'login-page',
         element: <LoginPage />,
       },
       {
-        path: 'terminal-congestion-check-page',
-        element: <TerminalCongestionCheckPage />,
-      },
-      {
-        path: 'vessel-operation-status-page',
-        element: <VesselOperationStatusPage />,
-      },
-      {
-        path: 'import-export-progress-check-page',
-        element: <ImportExportProgressCheckPage />,
+        element: <ServiceLayout />,
+        children: [
+          {
+            path: '',
+            element: <MainPage />,
+          },
+          {
+            path: 'terminal-congestion-check-page',
+            element: <TerminalCongestionCheckPage />,
+          },
+          {
+            path: 'vessel-operation-status-page',
+            element: <VesselOperationStatusPage />,
+          },
+          {
+            path: 'import-export-progress-check-page',
+            element: <ImportExportProgressCheckPage />,
+          },
+        ],
       },
     ],
   },
