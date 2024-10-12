@@ -1,0 +1,110 @@
+.dropdown-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 16px;
+
+  margin-top: 23px;
+  margin-bottom: 25px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0; // reset
+
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background: #ffffff;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.dropdown-text {
+  padding: 10px;
+  user-select: none;
+
+  color: #000;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px; // 원하는 크기로 조절
+  transition: transform 0.3s; // 회전 애니메이션 추가
+}
+
+.arrow-icon--down {
+  transform: rotate(0deg); // 닫힌 상태: 아래 방향
+}
+
+.arrow-icon--up {
+  transform: rotate(180deg); // 열린 상태: 위 방향
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin-top: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.menu-option {
+  position: relative; /* 가상 요소의 절대 위치를 위한 상대 위치 지정 */
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.option-button {
+  width: 100%;
+  padding: 10px;
+  border: none; // reset
+
+  color: #000;
+  text-align: left; // reset
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  user-select: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+
+  &:focus {
+    background-color: #e0e0e0;
+  }
+}

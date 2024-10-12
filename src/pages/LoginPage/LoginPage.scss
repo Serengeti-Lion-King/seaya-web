@@ -10,10 +10,11 @@
   }
 }
 
-button {
-  margin-bottom: 27px;
-  margin-top: 35px;
-}
+// BUG: 전역으로 설정됨. 임시로 주석처리함.
+// button {
+//   margin-bottom: 27px;
+//   margin-top: 35px;
+// }
 
 .links-container {
   display: flex;

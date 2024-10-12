@@ -10,11 +10,8 @@ const NavigationBar = ({ navText }: NavigationBarProps) => {
   const { navigateTo } = useCustomNavigation(); // 커스텀 훅 사용
 
   return (
-    <div className="navigation-bar">
-      <WestIcon
-        className="navigation-bar__icon"
-        onClick={() => navigateTo('/')}
-      />
+    <div className="nav-bar">
+      <WestIcon className="back-icon" onClick={() => navigateTo('/')} />
       <span>{navText}</span>
     </div>
   );
