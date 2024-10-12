@@ -1,8 +1,0 @@
-.terminal-congestion-page-navigation-bar {
-  @extend .navigation-bar; /* 공통 구조를 상속받습니다. */
-
-  // 스킨 관련 (skin)
-  background-color: #ffffff; /* TerminalCongestionPage에 맞는 배경색 */
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}

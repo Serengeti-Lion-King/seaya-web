@@ -2,7 +2,6 @@ import NavigationBar from '@components/NavigationBar/NavigationBar';
 import navItems from '@components/NavigationBar/navItems';
 import SearchBar from '@components/SearchBar/SearchBar';
 import TerminalDropdown from '@components/TerminalDropdown/TerminalDropdown';
-import ToolBar from '@components/ToolBar/ToolBar';
 import ImportExportProgressModal from '@features/ImportExportProgress/ImportExportProgressModal/ImportExportProgressModal';
 import TrackingStatus from '@features/ImportExportProgress/TrackingStatus/TrackingStatus';
 import useModal from '@hooks/useModal';
@@ -25,7 +24,6 @@ const ImportExportProgressCheckPage = () => {
       </button>
       <ImportExportProgressModal isOpen={isOpen} onClose={closeModal} />
       <TrackingStatus />
-      <ToolBar />
     </div>
   );
 };
