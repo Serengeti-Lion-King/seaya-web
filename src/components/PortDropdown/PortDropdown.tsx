@@ -1,6 +1,6 @@
 import ArrowDownIcon from '@assets/arrow_drop_down.svg?react';
 import useDropdown from '@hooks/useDropdown';
-import './PortDropdown.scss';
+import '../../styles/Dropdown.scss';
 
 interface PortDropdownProps {
   options: string[];
@@ -12,32 +12,34 @@ const PortDropdown = ({ options, label }: PortDropdownProps) => {
     useDropdown(label);
 
   return (
-    <div className="port-dropdown">
-      <button
-        type="button"
-        className="port-dropdown__toggle"
-        onClick={toggleDropdown}
-      >
-        {selectedOption || label}
-        <ArrowDownIcon
-          className={`port-dropdown__arrow ${isOpen ? 'port-dropdown__arrow--up' : 'port-dropdown__arrow--down'}`}
-        />
-      </button>
-      {isOpen && (
-        <ul className="port-dropdown__menu">
-          {options.map(option => (
-            <li className="port-dropdown__option" key={option}>
-              <button
-                type="button"
-                onClick={() => handleOptionClick(option)}
-                className="port-dropdown__option-button"
-              >
-                {option}
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
+    <div className="dropdown-container">
+      <div className="dropdown">
+        <button
+          type="button"
+          className="dropdown-toggle"
+          onClick={toggleDropdown}
+        >
+          <span className="dropdown-text">{selectedOption || label}</span>
+          <ArrowDownIcon
+            className={`arrow-icon ${isOpen ? 'arrow-icon--up' : 'arrow-icon--down'}`}
+          />
+        </button>
+        {isOpen && (
+          <ul className="dropdown-menu">
+            {options.map(option => (
+              <li className="menu-option" key={option}>
+                <button
+                  className="option-button"
+                  type="button"
+                  onClick={() => handleOptionClick(option)}
+                >
+                  {option}
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };

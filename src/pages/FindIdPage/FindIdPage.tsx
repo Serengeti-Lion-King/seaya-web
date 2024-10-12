@@ -1,7 +1,7 @@
-import NavigationBar from '@components/NavigationBar/NavigationBar';
-import Input from '@components/Input/Input';
 import Button from '@components/Button/Button';
-import React, { useState } from 'react';
+import Input from '@components/Input/Input';
+import NavigationBar from '@components/NavigationBar/NavigationBar';
+import { useState } from 'react';
 import './FindIdPage.scss';
 
 const FindIdPage = () => {
