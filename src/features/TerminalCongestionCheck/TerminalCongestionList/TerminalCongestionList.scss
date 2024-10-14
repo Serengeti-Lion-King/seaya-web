@@ -1,65 +1,121 @@
-// layout/_terminalLayout.scss
-.terminal-container {
+@mixin text-style($font-size, $color: #fff) {
+  color: $color;
+  font-family: Pretendard;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
+
+  margin: 25px 34px 0 34px;
 }
 
 .terminal-card {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 15px;
   display: flex;
   flex-direction: column;
 }
 
 .terminal-header {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  background-color: blue;
+  align-items: center;
+  padding: 4px 6px;
+
+  border-radius: 7px 7px 0px 0px;
+  background: #133384;
+}
+
+.terminal-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.anchor-icon {
+  width: 24px;
+  height: 24px; // 원하는 크기로 조절
 }
 
 .terminal-body {
   display: flex;
-  justify-content: space-between;
-}
-
-.work-status,
-.return-status {
-  display: flex;
   flex-direction: column;
+
+  border-radius: 0px 0px 7px 7px;
+  border-right: 0.5px solid #ddd;
+  border-bottom: 0.5px solid #ddd;
+  border-left: 0.5px solid #ddd;
 }
 
-.status {
-  padding: 3px 6px;
+.card-label {
+  display: flex;
+  padding: 6px 8px 0px 8px;
+  align-items: center;
+  align-self: stretch;
+  width: 100%; /* 부모 요소의 너비를 지정 */
+  &:last-child {
+    padding-bottom: 6px;
+  }
+}
+
+.status-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+}
+
+.text-status {
+  min-width: 24px; /* 원하는 최소 너비로 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  display: inline-block; /* 크기 고정 */
+}
+
+span.badge {
+  padding: 6px 8px;
+  color: #fff;
   border-radius: 5px;
-  text-align: center;
-}
 
-// theme/_terminalTheme.scss
-.terminal-name {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.terminal-time {
-  color: gray;
-  font-size: 12px;
+  min-width: 70px; /* 원하는 최소 너비로 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  display: inline-block; /* 크기 고정 */
 }
 
 .status-busy {
-  background-color: red;
-  color: white;
+  background-color: #b51111;
 }
 
 .status-normal {
-  background-color: blue;
-  color: white;
+  background-color: #396df1;
 }
 
-.trucks {
-  background-color: green;
-  color: white;
+.status-good {
+  background-color: #219b61;
+}
+
+.status-none {
+  background-color: #76819b;
+}
+
+.text-terminal {
+  @include text-style(13px);
+  font-weight: 700;
+}
+
+.text-time {
+  display: inline-flex;
+  justify-content: flex-end;
+  flex: 1 0 0;
+  @include text-style(12px);
+}
+
+.text {
+  @include text-style(14px, #000);
 }

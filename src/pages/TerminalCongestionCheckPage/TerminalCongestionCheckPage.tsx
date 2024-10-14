@@ -6,7 +6,6 @@ import {
   portOptions,
 } from '@components/PortDropdown/portOptions';
 import TerminalCongestionList from '@features/TerminalCongestionCheck/TerminalCongestionList/TerminalCongestionList';
-
 import './TerminalCongestionCheckPage.scss';
 
 const TerminalCongestionCheckPage = () => {

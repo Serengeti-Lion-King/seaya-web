@@ -20,35 +20,63 @@ const TerminalCongestionList = () => {
     fetchData();
   }, []);
 
+  // 상태 클래스 결정 함수
+  const getStatusClass = (status: string) => {
+    switch (status) {
+      case '혼잡':
+        return 'status-busy';
+      case '양호':
+        return 'status-good';
+      case '보통':
+        return 'status-normal';
+      default:
+        return 'status-none';
+    }
+  };
+
   return (
-    <div className="terminal-container">
-      {terminalData.map(terminal => (
-        <div key={terminal.id} className="terminal-card">
-          <div className="terminal-header">
-            <AnchorIcon />
-            <div className="terminal-name">{terminal.name}</div>
-            <div className="terminal-time">{terminal.operationTime}</div>
-          </div>
-          <div className="terminal-body">
-            <div className="work-status">
-              <span>본선작업현황</span>
-              <span
-                className={`status ${
-                  terminal.workStatus === '혼잡'
-                    ? 'status-busy'
-                    : 'status-normal'
-                }`}
-              >
-                {terminal.workStatus === '-' ? '-' : `${terminal.gangs} Gang`}
-              </span>
+    <div className="card-container">
+      {terminalData.map(terminal => {
+        const workStatusClass = getStatusClass(terminal.workStatus); // 작업 현황 클래스 결정
+        const returnStatusClass = getStatusClass(terminal.returnStatus); // 반출입 현황 클래스 결정
+        return (
+          <div key={terminal.id} className="terminal-card">
+            <div className="terminal-header">
+              <div className="terminal-name-wrapper">
+                <AnchorIcon className="anchor-icon" />
+                <div className="text-terminal">{terminal.name}</div>
+              </div>
+              <span className="text-time">{terminal.operationTime}</span>
             </div>
-            <div className="return-status">
-              <span>반출입현황</span>
-              <span className="trucks">{`${terminal.trucks} 대`}</span>
+            <div className="terminal-body">
+              <div className="card-label">
+                <span className="text">본선작업현황</span>
+                <div className="status-wrapper">
+                  <span className="text text-status">
+                    {terminal.workStatus}
+                  </span>
+                  <span className={`text badge ${workStatusClass}`}>
+                    {terminal.workStatus === '-'
+                      ? '-'
+                      : `${terminal.gangs} Gang`}
+                  </span>
+                </div>
+              </div>
+              <div className="card-label">
+                <span className="text">반출입현황</span>
+                <div className="status-wrapper">
+                  <span className="text text-status">
+                    {terminal.returnStatus}
+                  </span>
+                  <span
+                    className={`text badge ${returnStatusClass}`}
+                  >{`${terminal.trucks} 대`}</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };

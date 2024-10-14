@@ -5,7 +5,7 @@
   height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
-  overflow-y: scroll;
+  overflow-y: scroll; /* 콘텐츠가 많을 때 스크롤 가능 */
 }
 
 .mobile-web-view {

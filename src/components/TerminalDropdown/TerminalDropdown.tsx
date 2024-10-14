@@ -1,15 +1,17 @@
 import ArrowDownIcon from '@assets/arrow_drop_down.svg?react';
 import useDropdown from '@hooks/useDropdown';
 import '../../styles/Dropdown.scss';
+import terminalOptions from './terminalOptions';
 
 interface TerminalDropdownProps {
   options: string[];
-  label: string;
 }
 
-const TerminalDropdown = ({ options, label }: TerminalDropdownProps) => {
+const TerminalDropdown = ({ options }: TerminalDropdownProps) => {
+  const initialLabel = terminalOptions[0];
+
   const { isOpen, selectedOption, toggleDropdown, handleOptionClick } =
-    useDropdown(label);
+    useDropdown(initialLabel);
 
   return (
     <div className="dropdown-container">
@@ -19,7 +21,9 @@ const TerminalDropdown = ({ options, label }: TerminalDropdownProps) => {
           className="dropdown-toggle"
           onClick={toggleDropdown}
         >
-          <span className="dropdown-text">{selectedOption || label}</span>
+          <span className="dropdown-text">
+            {selectedOption || initialLabel}
+          </span>
           <ArrowDownIcon
             className={`arrow-icon ${isOpen ? 'arrow-icon--up' : 'arrow-icon--down'}`}
           />
