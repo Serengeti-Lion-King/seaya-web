@@ -1,5 +1,4 @@
 // terminalOptions.ts
-const terminalOptions = ['PNC', 'HJNC', 'HPNT', 'BNCT']; // 예시 항목
-const dropdownLabel = 'PNIT'; // 드롭다운 기본 라벨
+const terminalOptions = ['PNIT', 'PNC', 'HJNC', 'HPNT', 'BNCT']; // 예시 항목
 
-export { dropdownLabel, terminalOptions };
+export default terminalOptions;

@@ -9,7 +9,6 @@ interface TerminalDropdownProps {
 
 const TerminalDropdown = ({ options }: TerminalDropdownProps) => {
   const initialLabel = terminalOptions[0];
-
   const { isOpen, selectedOption, toggleDropdown, handleOptionClick } =
     useDropdown(initialLabel);
 

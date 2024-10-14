@@ -9,7 +9,6 @@ interface PortDropdownProps {
 
 const PortDropdown = ({ options }: PortDropdownProps) => {
   const initialLabel = portOptions[0];
-
   const { isOpen, selectedOption, toggleDropdown, handleOptionClick } =
     useDropdown(initialLabel);
 
