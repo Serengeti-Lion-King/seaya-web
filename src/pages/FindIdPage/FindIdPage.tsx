@@ -1,23 +1,24 @@
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import NavigationBar from '@components/NavigationBar/NavigationBar';
 import Input from '@components/Input/Input';
 import Button from '@components/Button/Button';
-import React, { useState } from 'react';
-import './FindIdPage.scss';
 import CheckIcon from '@assets/checkIcon.svg?react';
+import './FindIdPage.scss';
 
 const FindIdPage = () => {
   const [showVerificationInput, setShowVerificationInput] = useState(false);
   const [isComplete, setIsComplete] = useState(false);
+
+  const handleSubmitClick = () => {
+    setIsComplete(true);
+  };
 
   const handleVerificationClick = () => {
     setShowVerificationInput(true);
     if (showVerificationInput) {
       handleSubmitClick();
     }
-  };
-
-  const handleSubmitClick = () => {
-    setIsComplete(true);
   };
 
   return (
@@ -34,12 +35,14 @@ const FindIdPage = () => {
               labelText="휴대폰 번호"
               inputText='"-"를 제외하고 입력하세요.'
               className="input-phone"
+              inputId="phone-number"
             />
             {showVerificationInput && (
               <Input
                 labelText="인증번호"
                 inputText="인증번호를 입력하세요."
                 className="input-certification"
+                inputId="verification-code"
               />
             )}
           </div>
@@ -56,8 +59,12 @@ const FindIdPage = () => {
           <p>아이디 찾기 완료</p>
           <p>고객님의 SEAYA 아이디는 abcd입니다.</p>
           <div className="btn-select">
-            <Button className="login-btn" text="아이디 로그인" />
-            <Button className="reset-password-btn" text="비밀번호 재설정" />
+            <Link to="/login-page">
+              <Button className="login-btn" text="아이디 로그인" />
+            </Link>
+            <Link to="/reset-password">
+              <Button className="reset-password-btn" text="비밀번호 재설정" />
+            </Link>
           </div>
         </div>
       )}

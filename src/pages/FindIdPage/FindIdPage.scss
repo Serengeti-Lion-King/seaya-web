@@ -20,6 +20,9 @@
   font-size: 16px;
   width: 270px;
   height: 39px;
+  // 화면 하단에 고정
+  position: fixed;
+  bottom: 27px;
 }
 .box {
   margin-top: 23px;

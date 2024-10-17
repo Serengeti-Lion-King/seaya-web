@@ -4,13 +4,26 @@ interface InputProps {
   labelText: string;
   inputText: string;
   className?: string;
+  inputId: string;
 }
 
-const Input = ({ labelText, inputText, className = '' }: InputProps) => {
+const Input = ({
+  labelText,
+  inputText,
+  className = '',
+  inputId,
+}: InputProps) => {
   return (
     <div className={`input-item ${className}`}>
-      <label className="text-label">{labelText}</label>
-      <input type="text" placeholder={inputText} className="input-id" />
+      <label htmlFor={inputId} className="text-label">
+        {labelText}
+      </label>
+      <input
+        id={inputId}
+        type="text"
+        placeholder={inputText}
+        className="input-id"
+      />
     </div>
   );
 };
