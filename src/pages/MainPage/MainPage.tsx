@@ -1,13 +1,12 @@
 // MainPage.tsx
 
-import { Link } from 'react-router-dom';
-import ToolBar from '@components/ToolBar/ToolBar';
-import SearchBar from '@components/SearchBar/SearchBar';
-import MainBar from '@components/MainBar/MainBar';
-import mainPoster from '@assets/mainPoster.png';
-import TruckIcon from '@assets/truckIcon.svg?react';
 import GateIcon from '@assets/gateIcon.svg?react';
+import mainPoster from '@assets/mainPoster.png';
 import ShipIcon from '@assets/shipIcon.svg?react';
+import TruckIcon from '@assets/truckIcon.svg?react';
+import MainBar from '@components/MainBar/MainBar';
+import SearchBar from '@components/SearchBar/SearchBar';
+import { Link } from 'react-router-dom';
 import './MainPage.scss';
 
 const MainPage = () => {
@@ -30,7 +29,6 @@ const MainPage = () => {
           <GateIcon className="shortcut-icon type-terminal" />
         </Link>
       </div>
-      <ToolBar />
     </div>
   );
 };
