@@ -2,10 +2,7 @@ import NavigationBar from '@components/NavigationBar/NavigationBar';
 import navItems from '@components/NavigationBar/navItems';
 import SearchBar from '@components/SearchBar/SearchBar';
 import TerminalDropdown from '@components/TerminalDropdown/TerminalDropdown';
-import {
-  dropdownLabel,
-  terminalOptions,
-} from '@components/TerminalDropdown/terminalOptions';
+import terminalOptions from '@components/TerminalDropdown/terminalOptions';
 import ImportExportProgressModal from '@features/ImportExportProgress/ImportExportProgressModal/ImportExportProgressModal';
 import TrackingStatus from '@features/ImportExportProgress/TrackingStatus/TrackingStatus';
 import useModal from '@hooks/useModal';
@@ -18,7 +15,7 @@ const ImportExportProgressCheckPage = () => {
       <NavigationBar navText={navItems[6]} />
       <div className="search-dropdown-wrapper">
         <SearchBar className="temp-search-container" />
-        <TerminalDropdown options={terminalOptions} label={dropdownLabel} />
+        <TerminalDropdown options={terminalOptions} />
       </div>
       <button type="button" onClick={openModal}>
         모달 열기

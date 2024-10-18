@@ -3,22 +3,33 @@ import { useEffect, useState } from 'react';
 import { getTerminalData, TerminalData } from '../terminalItems';
 import './TerminalCongestionList.scss';
 
-const TerminalCongestionList = () => {
-  const [terminalData, setTerminalData] = useState<TerminalData[]>([]);
+interface TerminalCongestionListProps {
+  selectedPort: string; // 선택된 항구 이름
+}
 
+const TerminalCongestionList = ({
+  selectedPort,
+}: TerminalCongestionListProps) => {
+  const [terminalData, setTerminalData] = useState<TerminalData[]>([]); // 선택된 항구의 터미널 데이터
+  const [loading, setLoading] = useState<boolean>(true); // 데이터 로딩 상태
+
+  // 선택된 항구에 따른 데이터 fetch
   useEffect(() => {
-    // Mock API에서 데이터 가져오기
     const fetchData = async () => {
+      setLoading(true); // 데이터를 가져오는 동안 로딩 상태로 설정
       try {
-        const data = await getTerminalData();
-        setTerminalData(data);
+        const data = await getTerminalData(); // 모든 항구 데이터 가져오기
+        const portData = data.find(item => item.port === selectedPort); // 선택된 항구의 데이터 필터링
+        setTerminalData(portData ? portData.terminals : []); // 해당 항구의 터미널 데이터 설정
       } catch (error) {
         console.error('Error fetching terminal data:', error);
+      } finally {
+        setLoading(false); // 데이터 가져오기 완료 후 로딩 상태 해제
       }
     };
 
-    fetchData();
-  }, []);
+    fetchData(); // 항구가 변경될 때마다 데이터를 fetch
+  }, [selectedPort]); // selectedPort가 변경될 때마다 실행
 
   // 상태 클래스 결정 함수
   const getStatusClass = (status: string) => {
@@ -33,6 +44,11 @@ const TerminalCongestionList = () => {
         return 'status-none';
     }
   };
+
+  // 로딩 중일 때 표시할 내용
+  if (loading) {
+    return <p>Loading terminal data...</p>;
+  }
 
   return (
     <div className="card-container">

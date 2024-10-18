@@ -5,12 +5,18 @@ import portOptions from './portOptions';
 
 interface PortDropdownProps {
   options: string[];
+  onPortChange: (port: string) => void; // 선택된 항구를 상위 컴포넌트로 전달하는 함수
 }
 
-const PortDropdown = ({ options }: PortDropdownProps) => {
+const PortDropdown = ({ options, onPortChange }: PortDropdownProps) => {
   const initialLabel = portOptions[0];
   const { isOpen, selectedOption, toggleDropdown, handleOptionClick } =
     useDropdown(initialLabel);
+
+  const handlePortSelection = (option: string) => {
+    handleOptionClick(option);
+    onPortChange(option); // 선택된 항구를 상위 컴포넌트로 전달
+  };
 
   return (
     <div className="dropdown-container">
@@ -34,7 +40,7 @@ const PortDropdown = ({ options }: PortDropdownProps) => {
                 <button
                   className="option-button"
                   type="button"
-                  onClick={() => handleOptionClick(option)}
+                  onClick={() => handlePortSelection(option)}
                 >
                   {option}
                 </button>

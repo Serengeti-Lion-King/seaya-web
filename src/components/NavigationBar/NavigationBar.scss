@@ -6,6 +6,7 @@
   width: 100%; /* 기본적으로 너비는 100%로 설정 */
   justify-content: center;
   position: relative;
+  flex-shrink: 0;
 
   // 스킨 관련
   border-bottom: 1px solid #eee;
