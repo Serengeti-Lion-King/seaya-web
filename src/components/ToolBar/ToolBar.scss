@@ -9,6 +9,7 @@
 .tool-bar {
   // 상단에 회색 경계선 추가
   border-top: 1px solid #dddddd;
+  background-color: #ffffff;
 
   // 아이콘들 가로로 정렬 및 간격 설정
   display: flex;
@@ -23,15 +24,16 @@
   height: 59px;
 
   // 화면 하단 고정
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
 
+  // BUG: 전역으로 설정됨. 임시로 주석처리함.
   span {
     // 각 아이콘을 균등하게 분배
     flex: 1;
-    text-align: center;
+    // text-align: center;
 
     a {
       // 아이콘과 텍스트를 세로로 정렬
