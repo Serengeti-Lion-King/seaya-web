@@ -1,3 +1,4 @@
+import { MobileWebLayout, ServiceLayout } from '@layouts/index';
 import {
   ImportExportProgressCheckPage,
   LoginPage,
@@ -7,8 +8,6 @@ import {
 } from '@pages/index';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
-import MobileWebLayout from './layouts/MobileWebLayout/MobileWebLayout';
-import ServiceLayout from './layouts/ServiceLayout/ServiceLayout';
 
 const router = createBrowserRouter([
   {
