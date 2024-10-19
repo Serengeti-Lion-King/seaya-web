@@ -1,0 +1,12 @@
+.service-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.service-layout > div:first-child {
+  overflow-y: auto; /* 콘텐츠가 많을 때 스크롤 가능하게 설정 */
+}

@@ -49,7 +49,7 @@ const FindIdPage = () => {
 
           <Button
             onClick={handleVerificationClick}
-            className="btn-submit"
+            className="submit-btn"
             text={showVerificationInput ? '확인' : '인증번호 받기'}
           />
         </div>
@@ -60,7 +60,7 @@ const FindIdPage = () => {
           <p>고객님의 SEAYA 아이디는 abcd입니다.</p>
           <div className="btn-select">
             <Link to="/login-page">
-              <Button className="login-btn" text="아이디 로그인" />
+              <Button className="login-btn-01" text="아이디 로그인" />
             </Link>
             <Link to="/reset-password">
               <Button className="reset-password-btn" text="비밀번호 재설정" />

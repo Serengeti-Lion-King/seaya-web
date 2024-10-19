@@ -9,13 +9,18 @@ const LoginPage = () => {
     <div>
       <NavigationBar navText="로그인" />
       <div className="login-page">
-        <Input labelText="아이디" inputText="아이디를 입력해주세요." />
+        <Input
+          labelText="아이디"
+          inputText="아이디를 입력해주세요."
+          inputId="ID"
+        />
         <Input
           className="input-item"
           labelText="비밀번호"
           inputText="비밀번호를 입력해주세요."
+          inputId="password"
         />
-        <Button text="로그인" />
+        <Button className="login-btn-02" text="로그인" />
         <div className="links-container">
           <Link to="/find-id-page" className="link">
             아이디 찾기

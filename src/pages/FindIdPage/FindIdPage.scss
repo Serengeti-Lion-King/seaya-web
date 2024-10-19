@@ -15,7 +15,8 @@
   align-self: start;
   margin-left: 25px;
 }
-.btn-submit {
+.submit-btn {
+  // 버튼 스타일
   background-color: #334e9d;
   font-size: 16px;
   width: 270px;
@@ -39,9 +40,12 @@
 .btn-select {
   display: flex;
   gap: 10px;
+  // 버튼 하단에 고정
+  position: fixed;
+  bottom: 119px;
 }
 
-.login-btn {
+.login-btn-01 {
   background-color: #777777;
   width: 130px;
   height: 37px;
