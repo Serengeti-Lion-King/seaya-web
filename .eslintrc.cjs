@@ -75,6 +75,7 @@ module.exports = {
           ['@features', './src/features'], // Vite에서 사용 중인 별칭 추가
           ['@hooks', './src/hooks'], // Vite에서 사용 중인 별칭 추가
           ['@pages', './src/pages'], // Vite에서 사용 중인 별칭 추가
+          ['@layouts', './src/layouts'], // Vite에서 사용 중인 별칭 추가
           ['@styles', './src/styles'], // Vite에서 사용 중인 별칭 추가
           ['@utils', './src/utils'], // Vite에서 사용 중인 별칭 추가
         ],
