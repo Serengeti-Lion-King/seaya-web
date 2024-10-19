@@ -1,5 +1,6 @@
 import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage/ImportExportProgressCheckPage';
 import LoginPage from '@pages/LoginPage/LoginPage';
+import FindIdPage from '@pages/FindIdPage/FindIdPage';
 import MainPage from '@pages/MainPage/MainPage';
 import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage/TerminalCongestionCheckPage';
 import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: 'login-page',
         element: <LoginPage />,
+      },
+      {
+        path: 'find-id-page',
+        element: <FindIdPage />,
       },
       {
         element: <ServiceLayout />,
