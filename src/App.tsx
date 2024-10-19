@@ -2,7 +2,7 @@ import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage/
 import LoginPage from '@pages/LoginPage/LoginPage';
 import MainPage from '@pages/MainPage/MainPage';
 import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage/TerminalCongestionCheckPage';
-import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
+import VesselOperationStatusPage from '@pages/VesselOperationStatusPage/VesselOperationStatusPage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
 import MobileWebLayout from './layouts/MobileWebLayout/MobileWebLayout';
