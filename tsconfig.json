@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx", // React 17 이상일 때 사용
     "baseUrl": "./", // 프로젝트의 루트 경로
     "paths": {
       "@assets/*": ["src/assets/*"], // @assets 별칭 설정

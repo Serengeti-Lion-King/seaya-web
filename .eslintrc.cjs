@@ -20,7 +20,8 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off', // React 17 이상에서는 필요하지 않음
+    'react/react-in-jsx-scope': 'off', // React 17 이상에서는 필요하지 않음
     'react/jsx-filename-extension': [
       1,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
