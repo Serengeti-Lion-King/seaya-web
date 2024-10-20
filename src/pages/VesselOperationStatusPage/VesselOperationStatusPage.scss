@@ -1,8 +1,6 @@
-.dropdown-container {
-  display: flex;
-  justify-content: flex-end;
-  flex-shrink: 0;
-  margin-right: 12px;
+@import '@utils/mixins';
 
-  margin-top: 16px;
+.dropdown-container {
+  @include flex-container(row, flex-end, center);
+  margin: 23px 16px 0 0;
 }
