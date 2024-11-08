@@ -1,3 +1,5 @@
+// FindIdPage.tsx
+
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import NavigationBar from '@components/NavigationBar/NavigationBar';

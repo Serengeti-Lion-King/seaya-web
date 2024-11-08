@@ -1,23 +1,25 @@
-// SeacrchBar.tsx
+// SearchBar.tsx
 
 import SearchIcon from '@assets/magnifierIcon.svg?react';
-import './SearchBar.scss';
+import '@styles/SearchBar.scss';
 
 interface SearchBarProps {
-  className?: string;
+  wrapperClassName?: string;
+  inputFieldClassName?: string;
 }
 
-const SearchBar = ({ className = '' }: SearchBarProps) => {
+const SearchBar = ({
+  wrapperClassName = '',
+  inputFieldClassName = '',
+}: SearchBarProps) => {
   return (
-    <div className={`search-container ${className}`}>
-      <div className="search-bar">
-        <SearchIcon className="search-icon" />
-        <input
-          type="text"
-          placeholder="컨테이너 번호 조회"
-          className="search-input"
-        />
-      </div>
+    <div className={`search-bar ${wrapperClassName}`}>
+      <SearchIcon className="search-icon" />
+      <input
+        type="text"
+        placeholder="컨테이너 번호 조회"
+        className={`search-input ${inputFieldClassName}`}
+      />
     </div>
   );
 };
