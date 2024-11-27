@@ -20,7 +20,7 @@ const ImportExportProgressCheckPage = () => {
       <ImportExportProgressModal isOpen={isOpen} onClose={closeModal} />
 
       <div className="search-dropdown-wrapper">
-        <SearchBar className="temp-search-container" />
+        <SearchBar wrapperClassName="temp-search-container" />
         <TerminalDropdown options={terminalOptions} />
       </div>
       <TrackingStatus />
