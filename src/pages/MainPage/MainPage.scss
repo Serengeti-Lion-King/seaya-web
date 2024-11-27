@@ -38,3 +38,19 @@
   margin-bottom: 40px;
   margin-top: 24px;
 }
+.main-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 37px;
+}
+
+.search-bar--large {
+  border-radius: 5px;
+  padding: 10px 6px;
+  width: 244px;
+}
+
+.search-input--large {
+  font-size: 16px;
+}

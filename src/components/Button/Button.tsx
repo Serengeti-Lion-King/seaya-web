@@ -1,4 +1,6 @@
-import './Button.scss';
+// Button.tsx
+
+import '@styles/Button.scss';
 
 interface ButtonProps {
   text: string;

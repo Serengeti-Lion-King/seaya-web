@@ -20,6 +20,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'react/button-has-type': 'off', // 버튼 타입 지정 에러 끄기
     'react/jsx-uses-react': 'off', // React 17 이상에서는 필요하지 않음
     'react/react-in-jsx-scope': 'off', // React 17 이상에서는 필요하지 않음
     'react/jsx-filename-extension': [
