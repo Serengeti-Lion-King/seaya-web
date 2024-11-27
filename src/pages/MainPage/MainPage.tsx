@@ -20,7 +20,7 @@ const MainPage = () => {
           <span className="service-name">본선작업현황</span>
           <TruckIcon className="shortcut-icon type-vessel" />
         </Link>
-        <Link to="/" className="shortcut-item">
+        <Link to="/import-export-progress-check-page" className="shortcut-item">
           <span className="service-name">반출입현황</span>
           <ShipIcon className="shortcut-icon type-import" />
         </Link>

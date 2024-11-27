@@ -1,0 +1,56 @@
+// 기본 스타일 설정
+div {
+  label {
+    margin-left: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  a {
+    margin-left: auto;
+    font-size: 14px;
+    color: #3e7df7;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// 체크 아이콘 스타일
+.check-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  fill: #ccc; // 기본 색상 (체크되지 않았을 때)
+
+  &.checked {
+    fill: #3e7df7; // 체크되었을 때 파란색
+  }
+}
+
+// 섹션 헤더 스타일
+h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.sign-up-02 {
+  width: 270px;
+  height: 39px;
+}
+
+.text-01 {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}

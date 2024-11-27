@@ -13,6 +13,7 @@ const LoginPage = () => {
           labelText="아이디"
           inputText="아이디를 입력해주세요."
           inputId="ID"
+          className="input-item"
         />
         <Input
           className="input-item"
@@ -30,7 +31,7 @@ const LoginPage = () => {
             비밀번호 재설정
           </Link>
           <span className="divider">|</span>
-          <Link to="/signup" className="link">
+          <Link to="/sign-up-page" className="link">
             회원가입
           </Link>
         </div>

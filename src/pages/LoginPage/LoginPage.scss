@@ -1,3 +1,6 @@
+.input-item {
+  width: 270px;
+}
 .login-page {
   display: flex;
   flex-direction: column;
@@ -5,9 +8,9 @@
   align-items: center;
   margin-top: 53px;
 
-  .input-item {
-    margin-top: 29px;
-  }
+  // .input-item {
+  //   margin-top: 29px;
+  // }
 }
 
 .login-btn-02 {

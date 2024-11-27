@@ -1,9 +1,11 @@
 import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage/ImportExportProgressCheckPage';
 import LoginPage from '@pages/LoginPage/LoginPage';
+import SignUpPage from '@pages/SignUpPage/SignUpPage';
 import FindIdPage from '@pages/FindIdPage/FindIdPage';
 import MainPage from '@pages/MainPage/MainPage';
 import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage/TerminalCongestionCheckPage';
 import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
+import SignUpCompletePage from '@pages/SignUpComplePage/SignUpCompletePage'; // 회원가입 완료 페이지 추가
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
 import MobileWebLayout from './layouts/MobileWebLayout/MobileWebLayout';
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: 'find-id-page',
         element: <FindIdPage />,
+      },
+      {
+        path: 'sign-up-page',
+        element: <SignUpPage />,
+      },
+      {
+        path: 'sign-up-complete',
+        element: <SignUpCompletePage />,
       },
       {
         element: <ServiceLayout />,
