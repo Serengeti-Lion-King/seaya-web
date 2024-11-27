@@ -30,7 +30,7 @@ const LoginPage = () => {
             inputId="password"
           />
           {/* type="submit" 으로 폼 제출 */}
-          <Button className="login-btn-02" text="로그인" type="submit" />
+          <Button className="login-btn-02" text="로그인" />
         </form>
         <div className="links-container">
           <Link to="/find-id-page" className="link">

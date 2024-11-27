@@ -1,5 +1,3 @@
-// GateData와 관련된 인터페이스 및 타입 정의
-
 export interface WorkDetail {
   type: string;
   done: number;
@@ -9,7 +7,8 @@ export interface WorkDetail {
 
 export interface GateData {
   id: string;
-  name: string;
+  shippingCompany: string;
+  shipName: string;
   arrivalTime: string;
   departureTime: string;
   startTime: string;
@@ -22,7 +21,8 @@ export const getGateData = async (): Promise<GateData[]> => {
   return [
     {
       id: 'T1',
-      name: 'MBAS010 : MSC BASEL V(MSC)',
+      shippingCompany: 'MBAS010',
+      shipName: 'MSC BASEL V(MSC)',
       arrivalTime: '2024-07-10 05:00',
       departureTime: '2024-07-11 04:00',
       startTime: '2024-07-11 04:00',
@@ -34,7 +34,8 @@ export const getGateData = async (): Promise<GateData[]> => {
     },
     {
       id: 'T2',
-      name: 'ODOA004 : RDO ACE(ONE)',
+      shippingCompany: 'ODOA004',
+      shipName: 'RDO ACE(ONE)',
       arrivalTime: '2024-07-12 10:00',
       departureTime: '2024-07-14 03:00',
       startTime: '2024-07-12 11:48',
@@ -46,7 +47,8 @@ export const getGateData = async (): Promise<GateData[]> => {
     },
     {
       id: 'T3',
-      name: 'MFIT002 : MSC FAITH(MSC)',
+      shippingCompany: 'MFIT002',
+      shipName: 'MSC FAITH(MSC)',
       arrivalTime: '2024-07-13 17:00',
       departureTime: '2024-07-15 11:00',
       startTime: '2024-07-15 11:00',

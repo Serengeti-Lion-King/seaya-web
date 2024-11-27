@@ -1,45 +1,146 @@
-.slide {
-  max-width: 300px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
+@import '@utils/mixins';
 
-  & h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
+.gate-header-container {
+  @include flex-container(row, center, center);
 
-  & .gateName {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+  & .gate-header {
+    @include flex-container(row, space-between, center);
+    min-width: 170px;
 
-    & .progress {
-      font-weight: bold;
-      color: red; // 게이트 진행 상태의 퍼센트 표시 색
+    & > button {
+      @include flex-container(row, flex-start, center);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        color: #007bff;
+      }
+
+      & .arrow-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      & .arrow-icon--left {
+        transform: rotate(0deg);
+      }
+
+      & .arrow-icon--right {
+        transform: rotate(180deg);
+      }
+    }
+
+    & > h2 {
+      @include font(24px);
+      text-align: center;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
     }
   }
+}
 
-  & .infoTable {
-    margin-bottom: 15px;
+/* Progress Bar */
+.progress-bar-container {
+  margin: 16px 0;
+  overflow: hidden; /* 넘치는 부분을 숨김 */
+
+  & .progress-bar {
+    position: relative;
     width: 100%;
-    text-align: left;
+    height: 4px;
+    background-color: rgba(120, 120, 128, 0.16); /* 기본 배경색 */
 
-    & td {
-      padding: 5px;
-      border-bottom: 1px solid #ddd;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: var(
+        --progress,
+        0%
+      ); /* 진행 퍼센트에 따라 동적 적용, 기본적으로 0%로 시작 */
+      height: 100%;
+      background-color: var(--secondary-color); /* 진행률이 나타날 색상 */
+      transition: width 0.3s ease; /* 부드러운 애니메이션 */
+      border-radius: 100px;
     }
   }
+}
 
-  & .workDetails {
-    width: 100%;
-    text-align: left;
+.gate-info {
+  @include flex-container(row, space-between, center);
+  padding: 0 32px;
 
-    & th,
-    & td {
-      padding: 5px;
-      border-bottom: 1px solid #ddd;
+  & > div > p {
+    @include font(14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  & > span {
+    @include font(20px, var(--busy-color));
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+/* Schedule Grid Layout */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 10px;
+  border: 1px solid var(--border-gray-color);
+  border-radius: 6px;
+
+  & .label {
+    text-align: center;
+    font-weight: 700;
+    border-right: 1px solid var(--border-gray-color);
+  }
+
+  & > div {
+    padding: 10px 12px;
+    @include font(12px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    &:not(:first-child) {
+      border-top: 1px solid var(--border-gray-color);
+    }
+  }
+}
+
+/* Work Details Grid Layout */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+  border: 1px solid var(--border-gray-color);
+  border-radius: 6px;
+
+  & .label {
+    font-weight: 700;
+  }
+
+  & > div {
+    padding: 10px 12px;
+    @include font(12px);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    &:not(.label) {
+      border-top: 1px solid var(--border-gray-color);
+    }
+
+    &:not(:nth-child(4n)) {
+      border-right: 1px solid var(--border-gray-color);
     }
   }
 }

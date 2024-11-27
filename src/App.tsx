@@ -1,13 +1,14 @@
-import ImportExportProgressCheckPage from '@pages/ImportExportProgressCheckPage/ImportExportProgressCheckPage';
-import LoginPage from '@pages/LoginPage/LoginPage';
-import FindIdPage from '@pages/FindIdPage/FindIdPage';
-import MainPage from '@pages/MainPage/MainPage';
-import TerminalCongestionCheckPage from '@pages/TerminalCongestionCheckPage/TerminalCongestionCheckPage';
-import VesselOperationStatusPage from '@pages/VesselOperationStatusPage';
+import { MobileWebLayout, ServiceLayout } from '@layouts/index';
+import {
+  FindIdPage,
+  ImportExportProgressCheckPage,
+  LoginPage,
+  MainPage,
+  TerminalCongestionCheckPage,
+  VesselOperationStatusPage,
+} from '@pages/index';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
-import MobileWebLayout from './layouts/MobileWebLayout/MobileWebLayout';
-import ServiceLayout from './layouts/ServiceLayout/ServiceLayout';
 
 const router = createBrowserRouter([
   {

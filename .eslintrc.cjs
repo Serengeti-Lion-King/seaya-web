@@ -20,8 +20,9 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
     'react/button-has-type': 'off', // 버튼 타입 지정 에러 끄기
+    'react/jsx-uses-react': 'off', // React 17 이상에서는 필요하지 않음
+    'react/react-in-jsx-scope': 'off', // React 17 이상에서는 필요하지 않음
     'react/jsx-filename-extension': [
       1,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
@@ -76,6 +77,7 @@ module.exports = {
           ['@features', './src/features'], // Vite에서 사용 중인 별칭 추가
           ['@hooks', './src/hooks'], // Vite에서 사용 중인 별칭 추가
           ['@pages', './src/pages'], // Vite에서 사용 중인 별칭 추가
+          ['@layouts', './src/layouts'], // Vite에서 사용 중인 별칭 추가
           ['@styles', './src/styles'], // Vite에서 사용 중인 별칭 추가
           ['@utils', './src/utils'], // Vite에서 사용 중인 별칭 추가
         ],

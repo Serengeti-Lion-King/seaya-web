@@ -17,7 +17,7 @@
 }
 
 .terminal-card {
-  background-color: white;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -49,9 +49,9 @@
   flex-direction: column;
 
   border-radius: 0px 0px 7px 7px;
-  border-right: 0.5px solid #ddd;
-  border-bottom: 0.5px solid #ddd;
-  border-left: 0.5px solid #ddd;
+  border-right: 0.5px solid var(--border-gray-color);
+  border-bottom: 0.5px solid var(--border-gray-color);
+  border-left: 0.5px solid var(--border-gray-color);
 }
 
 .card-label {
@@ -90,19 +90,19 @@ span.badge {
 }
 
 .status-busy {
-  background-color: #b51111;
+  background-color: var(--busy-color);
 }
 
 .status-normal {
-  background-color: #396df1;
+  background-color: var(--secondary-color);
 }
 
 .status-good {
-  background-color: #219b61;
+  background-color: var(--good-color);
 }
 
 .status-none {
-  background-color: #76819b;
+  background-color: var(--none-color);
 }
 
 .text-terminal {

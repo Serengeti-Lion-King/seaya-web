@@ -17,10 +17,12 @@ const TerminalCongestionCheckPage = () => {
   return (
     <>
       <NavigationBar navText={navItems[4]} />
-      <PortDropdown
-        options={portOptions}
-        onPortChange={handlePortChange} // 선택된 항구를 업데이트
-      />
+      <div className="dropdown-container">
+        <PortDropdown
+          options={portOptions}
+          onPortChange={handlePortChange} // 선택된 항구를 업데이트
+        />
+      </div>
       <TerminalCongestionList selectedPort={selectedPort} />
     </>
   );
