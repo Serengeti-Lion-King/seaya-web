@@ -1,11 +1,5 @@
 // ToolBar.scss
 
-// @font-face {
-//   font-family: 'PRETENDARD-LIGHT';
-//   font-weight: lighter;
-//   src: url('@fonts/PRETENDARD-LIGHT.ttf') format('truetype');
-// }
-
 .tool-bar {
   // 상단에 회색 경계선 추가
   border-top: 1px solid #dddddd;
@@ -29,13 +23,12 @@
   right: 0;
   left: 0;
 
-  // BUG: 전역으로 설정됨. 임시로 주석처리함.
-  span {
+  .toolbar-item {
     // 각 아이콘을 균등하게 분배
     flex: 1;
     // text-align: center;
 
-    a {
+    .toolbar-link {
       // 아이콘과 텍스트를 세로로 정렬
       display: flex;
       flex-direction: column;
@@ -45,18 +38,18 @@
       font-size: 10px;
       transition: color 0.1s ease;
 
-      .icon {
+      .toolbar-icon {
         // 아이콘 크기 및 색상 설정
         width: 24px;
         height: 24px;
-        fill: #777777;
+        fill: currentColor;
         transition: fill 0.1s ease;
       }
 
       &:hover {
         // 마우스 호버 시 색상 변경
         color: black;
-        .icon {
+        .toolbar-icon {
           fill: black;
         }
       }

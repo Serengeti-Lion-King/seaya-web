@@ -6,6 +6,7 @@ import terminalOptions from '@components/TerminalDropdown/terminalOptions';
 import ImportExportProgressModal from '@features/ImportExportProgress/ImportExportProgressModal/ImportExportProgressModal';
 import TrackingStatus from '@features/ImportExportProgress/TrackingStatus/TrackingStatus';
 import useModal from '@hooks/useModal';
+import './ImportExportProgressCheckPage.scss';
 
 const ImportExportProgressCheckPage = () => {
   const { isOpen, openModal, closeModal } = useModal();
@@ -13,14 +14,15 @@ const ImportExportProgressCheckPage = () => {
   return (
     <div>
       <NavigationBar navText={navItems[6]} />
+      <button type="button" onClick={openModal} className="modal-button-open">
+        모달 열기
+      </button>
+      <ImportExportProgressModal isOpen={isOpen} onClose={closeModal} />
+
       <div className="search-dropdown-wrapper">
         <SearchBar className="temp-search-container" />
         <TerminalDropdown options={terminalOptions} />
       </div>
-      <button type="button" onClick={openModal}>
-        모달 열기
-      </button>
-      <ImportExportProgressModal isOpen={isOpen} onClose={closeModal} />
       <TrackingStatus />
     </div>
   );

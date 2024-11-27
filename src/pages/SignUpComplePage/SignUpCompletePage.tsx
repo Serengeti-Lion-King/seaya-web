@@ -1,6 +1,6 @@
 import Button from '@components/Button/Button';
 
-const SignUpCompletePag = () => {
+const SignUpCompletePage = () => {
   return (
     <div className="sign-up-complete">
       <div className="icon">
@@ -30,4 +30,4 @@ const SignUpCompletePag = () => {
   );
 };
 
-export default SignUpCompletePag;
+export default SignUpCompletePage;

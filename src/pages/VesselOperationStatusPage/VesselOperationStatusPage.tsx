@@ -8,7 +8,9 @@ const VesselOperationStatusPage = () => {
   return (
     <div>
       <NavigationBar navText={navItems[5]} />
-      <TerminalDropdown options={terminalOptions} />
+      <div className="dropdown-container">
+        <TerminalDropdown options={terminalOptions} />
+      </div>
       <GateSlider />
     </div>
   );

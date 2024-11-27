@@ -19,36 +19,32 @@ const PortDropdown = ({ options, onPortChange }: PortDropdownProps) => {
   };
 
   return (
-    <div className="dropdown-container">
-      <div className="dropdown">
-        <button
-          type="button"
-          className="dropdown-toggle"
-          onClick={toggleDropdown}
-        >
-          <span className="dropdown-text">
-            {selectedOption || initialLabel}
-          </span>
-          <ArrowDownIcon
-            className={`arrow-icon ${isOpen ? 'arrow-icon--up' : 'arrow-icon--down'}`}
-          />
-        </button>
-        {isOpen && (
-          <ul className="dropdown-menu">
-            {options.map(option => (
-              <li className="menu-option" key={option}>
-                <button
-                  className="option-button"
-                  type="button"
-                  onClick={() => handlePortSelection(option)}
-                >
-                  {option}
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
+    <div className="dropdown">
+      <button
+        type="button"
+        className="dropdown-toggle"
+        onClick={toggleDropdown}
+      >
+        <span className="dropdown-text">{selectedOption || initialLabel}</span>
+        <ArrowDownIcon
+          className={`arrow-icon ${isOpen ? 'arrow-icon--up' : 'arrow-icon--down'}`}
+        />
+      </button>
+      {isOpen && (
+        <ul className="dropdown-menu">
+          {options.map(option => (
+            <li className="menu-option" key={option}>
+              <button
+                className="option-button"
+                type="button"
+                onClick={() => handlePortSelection(option)}
+              >
+                {option}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

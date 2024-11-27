@@ -13,7 +13,12 @@ const MainPage = () => {
   return (
     <div>
       <MainBar />
-      <SearchBar />
+      <div className="main-search-container">
+        <SearchBar
+          wrapperClassName="search-bar--large "
+          inputFieldClassName="search-input--large"
+        />
+      </div>
       <img src={mainPoster} alt="example" className="main-poster" />
       <div className="shortcut-list">
         <Link to="/vessel-operation-status-page" className="shortcut-item">
