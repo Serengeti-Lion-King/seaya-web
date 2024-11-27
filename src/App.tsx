@@ -9,6 +9,9 @@ import {
 } from '@pages/index';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.scss';
+import SignUpPage from '@pages/SignUpPage/SignUpPage';
+import SignUpCompletePag from '@pages/SignUpComplePage/SignUpCompletePage';
+import SignUpCompletePage from '@pages/SignUpComplePage/SignUpCompletePage';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +25,14 @@ const router = createBrowserRouter([
       {
         path: 'find-id-page',
         element: <FindIdPage />,
+      },
+      {
+        path: 'sign-up-page',
+        element: <SignUpPage />,
+      },
+      {
+        path: 'sign-up-complete',
+        element: <SignUpCompletePage />,
       },
       {
         element: <ServiceLayout />,

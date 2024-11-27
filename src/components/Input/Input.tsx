@@ -14,7 +14,7 @@ const Input = ({
   inputId,
 }: InputProps) => {
   return (
-    <div className={`input-item ${className}`}>
+    <div className="input-item">
       <label htmlFor={inputId} className="text-label">
         {labelText}
       </label>
@@ -22,7 +22,7 @@ const Input = ({
         id={inputId}
         type="text"
         placeholder={inputText}
-        className="input-id"
+        className={`input-field  ${className}`}
       />
     </div>
   );

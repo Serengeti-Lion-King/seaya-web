@@ -1,0 +1,31 @@
+// /* 구조 (Structure) */
+// .signup-page {
+//   max-width: 400px;
+//   margin: 0 auto;
+//   padding: 20px;
+//   background-color: #ffffff;
+//   font-family: Arial, sans-serif;
+// }
+// .input-large .input-id {
+//   width: 179px;
+// }
+.input-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.input-big {
+  width: 258px;
+  height: 38px;
+}
+.input-small {
+  width: 179px;
+  height: 35px;
+}
+
+.sign-up {
+  // box-sizing: border-box;
+  width: 65px;
+  height: 35px;
+}

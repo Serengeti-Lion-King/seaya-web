@@ -32,6 +32,19 @@ const LoginPage = () => {
           {/* type="submit" 으로 폼 제출 */}
           <Button className="login-btn-02" text="로그인" />
         </form>
+        <Input
+          labelText="아이디"
+          inputText="아이디를 입력해주세요."
+          inputId="ID"
+          className="input-item"
+        />
+        <Input
+          className="input-item"
+          labelText="비밀번호"
+          inputText="비밀번호를 입력해주세요."
+          inputId="password"
+        />
+        <Button className="login-btn-02" text="로그인" />
         <div className="links-container">
           <Link to="/find-id-page" className="link">
             아이디 찾기
@@ -41,7 +54,7 @@ const LoginPage = () => {
             비밀번호 재설정
           </Link>
           <span className="divider">|</span>
-          <Link to="/signup" className="link">
+          <Link to="/sign-up-page" className="link">
             회원가입
           </Link>
         </div>
