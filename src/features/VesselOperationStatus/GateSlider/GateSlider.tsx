@@ -4,38 +4,36 @@ import GateSlide from './GateSlide';
 import './GateSlider.scss';
 
 const GateSlider = () => {
-  const [data, setData] = useState<GateData[]>([]);
+  const [gateData, setGateData] = useState<GateData[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
-      const gateData = await getGateData();
-      setData(gateData);
+      const data = await getGateData();
+      setGateData(data);
     };
 
     fetchData();
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex(prevIndex => (prevIndex + 1) % data.length);
+    setCurrentIndex(prevIndex => (prevIndex + 1) % gateData.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex(prevIndex => (prevIndex - 1 + data.length) % data.length);
+    setCurrentIndex(
+      prevIndex => (prevIndex - 1 + gateData.length) % gateData.length
+    );
   };
 
   return (
     <div className="slider">
-      {data.length > 0 && (
-        <>
-          <button type="button" onClick={prevSlide} className="arrowButton">
-            ◀
-          </button>
-          <GateSlide gate={data[currentIndex]} />
-          <button type="button" onClick={nextSlide} className="arrowButton">
-            ▶
-          </button>
-        </>
+      {gateData.length > 0 && (
+        <GateSlide
+          gate={gateData[currentIndex]}
+          onNextSlide={nextSlide}
+          onPrevSlide={prevSlide}
+        />
       )}
     </div>
   );

@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx", // React 17 이상일 때 사용
     "baseUrl": "./", // 프로젝트의 루트 경로
     "paths": {
       "@assets/*": ["src/assets/*"], // @assets 별칭 설정
@@ -22,6 +22,7 @@
       "@features/*": ["src/features/*"], // @features 별칭 설정
       "@hooks/*": ["src/hooks/*"], // @hooks 별칭 설정
       "@pages/*": ["src/pages/*"], // @pages 별칭 설정
+      "@layouts/*": ["src/layouts/*"], // @layouts 별칭 설정
       "@styles/*": ["src/styles/*"], // @styles 별칭 설정
       "@utils/*": ["src/utils/*"] // @utils 별칭 설정
     }

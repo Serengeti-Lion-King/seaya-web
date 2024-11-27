@@ -1,3 +1,18 @@
+.modal-button-open {
+  position: relative;
+  background: transparent;
+  color: transparent;
+
+  &:focus {
+    color: #000;
+    border: 1px solid #000;
+  }
+}
+
 .search-dropdown-wrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 22px;
 }

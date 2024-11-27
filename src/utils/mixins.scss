@@ -1,0 +1,21 @@
+@mixin flex-container($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($size, $color: #000) {
+  font-size: $size;
+  color: $color;
+
+  /*
+  // 반응형 디자인을 위한 옵션
+  @media (max-width: 768px) {
+    font-size: $size * 0.875; // 작은 화면에서 크기를 조정
+  }
+  @media (max-width: 480px) {
+    font-size: $size * 0.75; // 더 작은 화면에서 크기를 조정
+  }
+  */
+}
