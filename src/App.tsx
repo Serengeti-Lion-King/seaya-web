@@ -1,5 +1,6 @@
 import { MobileWebLayout, ServiceLayout } from '@layouts/index';
 import {
+  FindIdPage,
   ImportExportProgressCheckPage,
   LoginPage,
   MainPage,
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: 'login-page',
         element: <LoginPage />,
+      },
+      {
+        path: 'find-id-page',
+        element: <FindIdPage />,
       },
       {
         element: <ServiceLayout />,
